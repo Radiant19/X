@@ -13,20 +13,39 @@ export default {
 	},
 	plugins: [daisyui],
 
-	daisyui: {
-		themes: [
-			"light",
-			{
-				black: {
-					...daisyUIThemes["black"],
-					primary: "rgb(29, 155, 240)",
-					secondary: "rgb(24, 24, 24)",
-				},
+// 	daisyui: {
+// 		themes: [
+// 			"light",
+// 			{
+// 				black: {
+// 					...daisyUIThemes["black"],
+// 					primary: "rgb(29, 155, 240)",
+// 					secondary: "rgb(24, 24, 24)",
+// 				},
+// 			},
+// 		],
+// 	},
+// };
+// ```
+
+daisyui: {
+	themes: [
+		"light",
+		{
+			black: {
+				...daisyUIThemes["black"],
+				"base-100": "#1E1E1E", // background color
+				"base-200": "#2C2C2C", // slight contrast
+				"base-300": "#3A3A3A", // further contrast for cards/modals
+				"neutral": "#2A2A2A",
+				"neutral-focus": "#3D3D3D",
+				primary: "rgb(29, 155, 240)",
+				secondary: "rgb(24, 24, 24)",
 			},
-		],
-	},
-};
-```
+		},
+	],
+},
+
 
 # Add data-theme="black" to the HTML TAG
 
