@@ -23,7 +23,7 @@ const SignUpPage = () => {
 	const { mutate, isError, isPending, error } = useMutation({
 		mutationFn: async ({ email, username, fullName, password }) => {
 			try {
-				const res = await fetch("/api/auth/signup", {
+				const res = await fetch("https://backendx-8nsw.onrender.com/api/auth/signup", {
 					method: "POST",
 					headers: {
 						"Content-Type": "application/json",
@@ -51,7 +51,7 @@ const SignUpPage = () => {
 	});
 
 	const handleSubmit = (e) => {
-		e.preventDefault(); // page won't reload
+		e.preventDefault(); // page won't reload`
 		mutate(formData);
 	};
 
